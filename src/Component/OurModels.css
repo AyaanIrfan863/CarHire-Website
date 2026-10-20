@@ -1,0 +1,742 @@
+.cf-section {
+  position: relative;
+  width: 100%;
+  background: #070606;
+  padding: 90px 6% 80px;
+  box-sizing: border-box;
+  color: #efe7dc;
+  font-family: "Manrope", "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cf-section * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cf-section ::selection {
+  background: #a31621;
+  color: #fff;
+}
+
+.cf-section button {
+  font-family: "Manrope", "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.cf-section :focus-visible {
+  outline: 2px solid #c22530;
+  outline-offset: 3px;
+}
+
+.cf-head {
+  text-align: center;
+}
+
+.cf-kicker {
+  display: inline-block;
+  font: 800 10px/1 "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: #c22530;
+  margin-bottom: 14px;
+}
+
+.cf-heading {
+  font: 600 clamp(32px, 4vw, 52px) / 1.05 "Fraunces", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.cf-heading em,
+.cf-mname em {
+  font-style: italic;
+  color: #c22530;
+}
+
+/* --- Sub text: ab italic serif, bara aur readable --- */
+.cf-sub {
+  margin-top: 14px;
+  font: italic 500 15px/1.7 "Fraunces", Georgia, serif;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: rgba(239, 231, 220, 0.55);
+}
+
+.cf-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+/* --- Pills: ab bold --- */
+.cf-pill {
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(239, 231, 220, 0.16);
+  font: 700 11px/1 "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(239, 231, 220, 0.65);
+  background: rgba(255, 255, 255, 0.02);
+  transition: 0.25s;
+}
+
+.cf-pill:hover {
+  border-color: rgba(239, 231, 220, 0.45);
+  color: #efe7dc;
+}
+
+.cf-pill.active {
+  background: #c22530;
+  border-color: #c22530;
+  color: #fff;
+  box-shadow: 0 8px 24px -10px rgba(194, 37, 48, 0.7);
+}
+
+.cf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1200px;
+  margin: 38px auto 0;
+}
+
+.cf-card {
+  background: linear-gradient(180deg, #151011 0%, #0c0909 100%);
+  border: 1px solid rgba(239, 231, 220, 0.13);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s,
+    box-shadow 0.35s;
+}
+
+.cf-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(194, 37, 48, 0.55);
+  box-shadow: 0 24px 50px -30px rgba(163, 22, 33, 0.65);
+}
+
+.cf-card-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(239, 231, 220, 0.13);
+  background: #0d0a0a;
+}
+
+.cf-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.cf-card:hover .cf-card-media img {
+  transform: scale(1.06);
+}
+
+.cf-ph {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(239, 231, 220, 0.05) 0 1px,
+      transparent 1px 16px
+    ),
+    linear-gradient(180deg, #171010, #0d0909);
+}
+
+.cf-ph span {
+  font: italic 600 26px "Fraunces", Georgia, serif;
+  letter-spacing: 0.04em;
+  color: rgba(239, 231, 220, 0.25);
+}
+
+.cf-ph-lg {
+  min-height: 420px;
+  height: 100%;
+}
+
+.cf-ph-lg span {
+  font-size: 44px;
+}
+
+.cf-card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 16px;
+  gap: 12px;
+}
+
+.cf-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* --- CH-03 code: ab extra bold --- */
+.cf-code {
+  font: 800 14px "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.1em;
+  color: #efe7dc;
+}
+
+.cf-cat {
+  font: 600 10px "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(239, 231, 220, 0.38);
+}
+
+.cf-price {
+  font: 800 16px "Manrope", "Segoe UI", sans-serif;
+  color: #efe7dc;
+}
+
+.cf-price em {
+  font: 600 10px "Manrope", "Segoe UI", sans-serif;
+  font-style: normal;
+  color: rgba(239, 231, 220, 0.38);
+  margin-left: 5px;
+}
+
+.cf-go {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: none;
+  border: 1px solid rgba(239, 231, 220, 0.22);
+  display: grid;
+  place-items: center;
+  color: #efe7dc;
+  transition: 0.3s;
+}
+
+.cf-go:hover {
+  background: #c22530;
+  border-color: #c22530;
+  transform: rotate(8deg);
+}
+
+.cf-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 0;
+  color: rgba(239, 231, 220, 0.38);
+  font: 600 12px "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.12em;
+}
+
+.cf-pager {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.cf-page {
+  min-width: 36px;
+  height: 36px;
+  padding: 0 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(239, 231, 220, 0.16);
+  display: grid;
+  place-items: center;
+  font: 700 12px "Manrope", "Segoe UI", sans-serif;
+  color: rgba(239, 231, 220, 0.6);
+  transition: 0.25s;
+}
+
+.cf-page:hover {
+  border-color: rgba(239, 231, 220, 0.5);
+  color: #efe7dc;
+}
+
+.cf-page.active {
+  background: #c22530;
+  border-color: #c22530;
+  color: #fff;
+}
+
+.cf-page:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.cf-page:disabled:hover {
+  border-color: rgba(239, 231, 220, 0.16);
+  color: rgba(239, 231, 220, 0.6);
+}
+
+.cf-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: #0a0808;
+  color-scheme: dark;
+  animation: cfPanelUp 0.7s cubic-bezier(0.76, 0, 0.24, 1) both;
+}
+
+.cf-modal.closing {
+  animation: cfPanelDown 0.6s cubic-bezier(0.55, 0, 0.85, 0.45) both;
+}
+
+@keyframes cfPanelUp {
+  from {
+    transform: translateY(103%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes cfPanelDown {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(103%);
+  }
+}
+
+.cf-close {
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(239, 231, 220, 0.25);
+  background: rgba(10, 8, 8, 0.6);
+  backdrop-filter: blur(6px);
+  color: #efe7dc;
+  display: grid;
+  place-items: center;
+  transition: 0.3s;
+}
+
+.cf-close:hover {
+  border-color: #c22530;
+  color: #c22530;
+  transform: rotate(90deg);
+}
+
+.cf-modal-scroll {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.cf-modal-scroll::-webkit-scrollbar {
+  width: 9px;
+}
+
+.cf-modal-scroll::-webkit-scrollbar-thumb {
+  background: rgba(239, 231, 220, 0.15);
+}
+
+.cf-anim {
+  animation: cfRevIn 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes cfRevIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.cf-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  min-height: 66vh;
+}
+
+.cf-hero-media {
+  position: relative;
+  min-height: 420px;
+  border-right: 1px solid rgba(239, 231, 220, 0.13);
+}
+
+.cf-hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cf-hero-info {
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cf-mcode {
+  font: 700 10px "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: #c22530;
+}
+
+.cf-mname {
+  font: 600 clamp(30px, 3.2vw, 46px) / 1.05 "Fraunces", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.cf-mprice b {
+  font: 800 26px "Manrope", "Segoe UI", sans-serif;
+  color: #efe7dc;
+}
+
+.cf-mprice span {
+  font: 600 11px "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.14em;
+  color: rgba(239, 231, 220, 0.38);
+}
+
+.cf-mrating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cf-mrating b {
+  font: 700 13px "Manrope", "Segoe UI", sans-serif;
+  color: #efe7dc;
+}
+
+.cf-mrating span {
+  font: 600 11px "Manrope", "Segoe UI", sans-serif;
+  color: rgba(239, 231, 220, 0.38);
+}
+
+.cf-stars {
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.cf-stars .bg {
+  color: rgba(232, 178, 61, 0.28);
+}
+
+.cf-stars .fg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #e8b23d;
+}
+
+.cf-mdesc {
+  font: 500 14px/1.85 "Manrope", "Segoe UI", sans-serif;
+  color: rgba(239, 231, 220, 0.65);
+  max-width: 54ch;
+}
+
+.cf-mactions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.cf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  padding: 13px 26px;
+  font: 700 11px "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: 0.25s;
+}
+
+.cf-btn-solid {
+  background: #c22530;
+  color: #fff;
+}
+
+.cf-btn-solid:hover {
+  background: #d03040;
+}
+
+.cf-btn-ghost {
+  border: 1px solid rgba(239, 231, 220, 0.28);
+  color: #efe7dc;
+}
+
+.cf-btn-ghost:hover {
+  border-color: #c22530;
+  color: #c22530;
+}
+
+.cf-book {
+  width: 100%;
+  max-width: 520px;
+  margin-top: 10px;
+  padding: 22px;
+  border: 1px solid rgba(239, 231, 220, 0.13);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.cf-book-title {
+  font: italic 600 17px "Fraunces", Georgia, serif;
+  margin-bottom: 16px;
+}
+
+.cf-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.cf-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font: 700 9px "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(239, 231, 220, 0.38);
+}
+
+.cf-fields input {
+  width: 100%;
+  background: #0d0a0a;
+  border: 1px solid rgba(239, 231, 220, 0.16);
+  border-radius: 8px;
+  padding: 11px 12px;
+  color: #efe7dc;
+  font: 500 13px "Manrope", "Segoe UI", sans-serif;
+  outline: none;
+  transition: border-color 0.25s;
+}
+
+.cf-fields input:focus {
+  border-color: #c22530;
+}
+
+.cf-sum {
+  border-top: 1px solid rgba(239, 231, 220, 0.13);
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cf-sum div {
+  display: flex;
+  justify-content: space-between;
+  font: 500 12px "Manrope", "Segoe UI", sans-serif;
+  color: rgba(239, 231, 220, 0.6);
+}
+
+.cf-sum b {
+  font: 700 13px "Manrope", "Segoe UI", sans-serif;
+  color: #efe7dc;
+}
+
+.cf-sum .cf-total {
+  border-top: 1px dashed rgba(239, 231, 220, 0.15);
+  padding-top: 10px;
+  margin-top: 4px;
+}
+
+.cf-sum .cf-total b {
+  color: #c22530;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.cf-book-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cf-success {
+  width: 100%;
+  max-width: 520px;
+  margin-top: 10px;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(70, 200, 120, 0.4);
+  background: rgba(46, 160, 90, 0.08);
+  font: 500 13px/1.8 "Manrope", "Segoe UI", sans-serif;
+  color: #b9e4c7;
+}
+
+.cf-success b {
+  display: block;
+  font: 700 14px "Manrope", "Segoe UI", sans-serif;
+  margin-bottom: 6px;
+  color: #d7f2e0;
+}
+
+.cf-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0 48px 60px;
+}
+
+.cf-tile {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(239, 231, 220, 0.13);
+  animation: cfRevIn 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.cf-tile:nth-child(1) {
+  animation-delay: 0.25s;
+}
+
+.cf-tile:nth-child(2) {
+  animation-delay: 0.32s;
+}
+
+.cf-tile:nth-child(3) {
+  animation-delay: 0.39s;
+}
+
+.cf-tile:nth-child(4) {
+  animation-delay: 0.46s;
+}
+
+.cf-tile:nth-child(5) {
+  animation-delay: 0.53s;
+}
+
+.cf-tile:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.cf-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cf-tile figcaption {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  font: 700 9px "Manrope", "Segoe UI", sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #efe7dc;
+}
+
+@media (max-width: 1100px) {
+  .cf-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .cf-hero-media {
+    min-height: 280px;
+    border-right: none;
+    border-bottom: 1px solid rgba(239, 231, 220, 0.13);
+  }
+
+  .cf-hero-info {
+    padding: 36px 26px;
+  }
+
+  .cf-gallery {
+    padding: 0 26px 48px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cf-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cf-section {
+    padding: 70px 5% 60px;
+  }
+
+  .cf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cf-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .cf-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .cf-close {
+    top: 14px;
+    right: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cf-anim,
+  .cf-tile,
+  .cf-modal,
+  .cf-modal.closing {
+    animation: none;
+  }
+}
+
+.cf-error {
+  width: 100%;
+  max-width: 520px;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(220, 60, 60, 0.45);
+  background: rgba(200, 40, 40, 0.08);
+  font: 500 13px/1.6 "Manrope", "Segoe UI", sans-serif;
+  color: #f0b4b4;
+}
+
+.cf-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}

@@ -1,0 +1,397 @@
+.id-section {
+  min-height: 100vh;
+  padding: 100px 5% 50px;
+  background: linear-gradient(135deg, #0a0a0f 0%, #140505 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.id-loading {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.id-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.id-container h1 {
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ===== Profile Card ===== */
+.id-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 35px;
+  backdrop-filter: blur(20px);
+  margin-bottom: 40px;
+}
+
+.id-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.15);
+  border: 2px solid rgba(239, 68, 68, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ef4444;
+}
+
+.id-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.info-row svg {
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+.id-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.edit-btn,
+.logout-btn {
+  flex: 1;
+  padding: 13px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -6px rgba(239, 68, 68, 0.5);
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+/* ===== Edit Form ===== */
+.id-edit-form,
+.booking-edit-form {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  backdrop-filter: blur(20px);
+  margin-bottom: 40px;
+}
+
+.id-edit-form input,
+.id-edit-form textarea,
+.booking-edit-form input,
+.booking-edit-form select {
+  width: 100%;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.booking-edit-form select option {
+  background: #1a1a1a;
+}
+
+.id-edit-form input::placeholder,
+.id-edit-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.id-edit-form input:focus,
+.id-edit-form textarea:focus,
+.booking-edit-form input:focus,
+.booking-edit-form select:focus {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.06);
+}
+
+.form-actions,
+.booking-edit-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.save-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border: none;
+  color: #fff;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ===== Tabs ===== */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 14px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tabs button.active {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+}
+
+.tabs button:hover:not(.active) {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Empty State ===== */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.empty-state svg {
+  margin-bottom: 16px;
+  color: rgba(239, 68, 68, 0.4);
+}
+
+.empty-state p {
+  font-size: 1rem;
+}
+
+/* ===== Bookings List ===== */
+.bookings-list,
+.wishlist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.booking-card,
+.wishlist-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.booking-card:hover,
+.wishlist-card:hover {
+  border-color: rgba(239, 68, 68, 0.3);
+  background: rgba(239, 68, 68, 0.03);
+}
+
+.booking-info h3,
+.wishlist-info h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  text-transform: capitalize;
+}
+
+.booking-info p,
+.wishlist-info p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.88rem;
+  margin: 4px 0;
+}
+
+.booking-info .booking-date,
+.wishlist-info .added-date {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.wishlist-info .price {
+  color: #ef4444 !important;
+  font-weight: 700;
+  font-size: 1.1rem !important;
+}
+
+.wishlist-image {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.wishlist-card {
+  align-items: center;
+}
+
+/* ===== Action Buttons ===== */
+.booking-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-small-btn,
+.delete-small-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+}
+
+.edit-small-btn {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.edit-small-btn:hover {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.delete-small-btn {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fca5a5;
+  padding: 8px 10px;
+}
+
+.delete-small-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .id-card,
+  .id-edit-form,
+  .booking-edit-form {
+    padding: 25px 20px;
+  }
+
+  .id-actions,
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .booking-card,
+  .wishlist-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .booking-actions {
+    width: 100%;
+  }
+
+  .edit-small-btn,
+  .delete-small-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+}

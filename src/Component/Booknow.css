@@ -1,0 +1,351 @@
+
+.booknow {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 100px 5% 60px;
+  max-width: 1400px;
+ 
+  margin: 0 auto;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(10, 10, 15, 0.92) 0%,
+      rgba(20, 5, 5, 0.85) 50%,
+      rgba(10, 10, 15, 0.95) 100%
+    ),
+    url("https://i.pinimg.com/736x/f9/54/65/f9546567baacbb4b5df31f3c443d820f.jpg")
+      center center / cover no-repeat;
+}
+
+.booknow::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(139, 0, 0, 0.25) 0%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.booknow::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(139, 0, 0, 0.18) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.booknow > * {
+  position: relative;
+  z-index: 1;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.headings h3 {
+  color: #8B0000;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 60px;
+  margin: 0;
+}
+
+.headings h1 {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.headings h1 span {
+  color: #8B0000;
+}
+
+.headings p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0;
+}
+
+.headings .trust-badges {
+  display: flex;
+  gap: 30px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.trust-badges .badge {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.trust-badges .badge .num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #8B0000;
+  line-height: 1;
+}
+
+.trust-badges .badge .label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.booking-form {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 45px 40px;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.booking-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 0, 0, 0.8),
+    transparent
+  );
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.forms input,
+.forms select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.forms input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.forms input:focus,
+.forms select:focus {
+  border-color: #8B0000;
+  background: rgba(139, 0, 0, 0.08);
+  box-shadow: 0 0 0 4px rgba(139, 0, 0, 0.15);
+}
+
+.forms select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3e%3cpath fill='%238B0000' d='M6 8L0 0h12z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 12px;
+  padding-right: 50px;
+  cursor: pointer;
+}
+
+.forms select option {
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 12px;
+}
+
+.forms input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.forms input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.book-now-btn {
+  width: 100%;
+  padding: 17px;
+  background: linear-gradient(135deg, #640000 0%, #8B0000 100%);
+  border: 1px solid #8B0000;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-top: 6px;
+  box-shadow: 0 10px 25px -8px rgba(139, 0, 0, 0.5);
+}
+
+.book-now-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.book-now-btn:hover::before {
+  left: 100%;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #8B0000 0%, #640000 100%);
+  box-shadow: 0 15px 30px -8px rgba(139, 0, 0, 0.6);
+}
+
+.book-now-btn:active {
+  transform: translateY(0);
+}
+
+.book-now-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-message {
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 8px;
+  animation: slideIn 0.4s ease;
+}
+
+.form-message.success {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+
+.form-message.error {
+  background: rgba(139, 0, 0, 0.12);
+  border: 1px solid rgba(139, 0, 0, 0.3);
+  color: #fca5a5;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .booknow {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 80px 5% 50px;
+    text-align: center;
+  }
+
+  .headings {
+    align-items: center;
+  }
+
+  .headings h3 {
+    padding-left: 0;
+  }
+
+  .headings h3::before {
+    display: none;
+  }
+
+  .headings p {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .booking-form {
+    padding: 30px 22px;
+  }
+
+  .forms {
+    gap: 16px;
+  }
+
+  .forms input,
+  .forms select,
+  .book-now-btn {
+    padding: 14px 18px;
+    font-size: 0.9rem;
+  }
+
+  .headings .trust-badges {
+    justify-content: center;
+    gap: 20px;
+  }
+}

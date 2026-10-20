@@ -1,0 +1,255 @@
+.carhire-lifestyle-banner {
+  width: 100%;
+  padding: 100px 6%;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  min-height: 70vh;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgba(11, 13, 15, 0.7), rgba(11, 13, 15, 0.7)),
+    url("https://i.pinimg.com/736x/f5/60/81/f5608117b672c603d6cd34d9d64d46c5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  isolation: isolate;
+}
+
+.carhire-lifestyle-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  animation: bgZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes bgZoom {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.1) translate(-1%, -1%);
+  }
+}
+
+.carhire-lifestyle-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(139, 0, 0, 0.18) 0%,
+    transparent 60%
+  );
+  z-index: -1;
+  animation: glowPulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.carhire-lifestyle-content {
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.carhire-lifestyle-heading {
+  font-style: italic;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-align: center;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease-out 0.2s forwards;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+}
+
+.carhire-lifestyle-heading span {
+  color: #8b0000;
+  display: inline-block;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px) scale(0.9);
+  animation: fadeUpScale 1s ease-out 0.6s forwards;
+  text-shadow: 0 0 25px rgba(139, 0, 0, 0.7), 0 0 50px rgba(139, 0, 0, 0.4);
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+.carhire-lifestyle-heading span:hover {
+  transform: translateY(-4px) scale(1.05);
+  text-shadow: 0 0 35px rgba(255, 40, 40, 0.9), 0 0 70px rgba(139, 0, 0, 0.6);
+}
+
+.carhire-lifestyle-heading span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8b0000, transparent);
+  transform: translateX(-50%);
+  transition: width 0.5s ease;
+}
+
+.carhire-lifestyle-heading span:hover::after {
+  width: 100%;
+}
+
+.carhire-lifestyle-content > p {
+  text-align: center;
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
+  letter-spacing: 2px;
+  font-family: "Michroma", sans-serif;
+  font-weight: bold;
+  margin: 1.5rem 0 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out 1s forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.carhire-lifestyle-content > p span {
+  color: #8b0000;
+  text-shadow: 0 0 15px rgba(139, 0, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.carhire-lifestyle-content > p span:hover {
+  color: #ff1a1a;
+  text-shadow: 0 0 20px rgba(255, 26, 26, 0.9);
+}
+
+.carhire-lifestyle-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 50px;
+  margin-top: 2rem;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out 1.4s forwards;
+}
+
+.carhire-lifestyle-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #8b0000;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.carhire-lifestyle-btn:hover {
+  color: #fff;
+  border-color: #8b0000;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(139, 0, 0, 0.5);
+  letter-spacing: 3px;
+}
+
+.carhire-lifestyle-btn:hover::before {
+  transform: translateX(0);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpScale {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .carhire-lifestyle-banner {
+    padding: 60px 5%;
+    min-height: 55vh;
+    background-attachment: scroll;
+  }
+
+  .carhire-lifestyle-heading {
+    font-size: clamp(2rem, 12vw, 3.5rem);
+    letter-spacing: 1px;
+  }
+
+  .carhire-lifestyle-content > p {
+    font-size: clamp(0.9rem, 4vw, 1.3rem);
+    letter-spacing: 1px;
+  }
+
+  .carhire-lifestyle-btn {
+    padding: 12px 35px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carhire-lifestyle-banner {
+    padding: 50px 4%;
+    min-height: 50vh;
+  }
+
+  .carhire-lifestyle-heading {
+    line-height: 1.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carhire-lifestyle-banner::before,
+  .carhire-lifestyle-banner::after {
+    animation: none;
+  }
+
+  .carhire-lifestyle-heading,
+  .carhire-lifestyle-heading span,
+  .carhire-lifestyle-content > p,
+  .carhire-lifestyle-btn {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
